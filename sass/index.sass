@@ -26,15 +26,22 @@ body
      margin: 0
      overflow-x : hidden
 //!__________________________________________________________
+body
+     background-color: #f0f0f0
+     display: flex
+     flex-direction: column
 
 main
      max-width: 320px
      margin: 20px auto
      display: grid
      grid-row: 1fr 1fr 1fr
+     border-radius: 10px
+     overflow: hidden
 
 .join
      padding: 20px
+     background-color: #fff
      h2
           margin: 0
           color: $cyan
@@ -72,4 +79,44 @@ main
 .why
      color: $white
      background-color: $bright-cyan
-     padding: 20px
+     padding: 30px
+     h2
+          margin: 0
+          font-size: 18px
+     ul
+          padding-left: 5px
+          li
+               list-style: none
+
+footer
+     margin: auto
+     max-width: 300px
+
+@media screen and (min-width: 700px)
+     html  
+          height: 100vh
+          min-height: 500px
+          display: flex
+          align-items: center
+          justify-content: center
+     main
+          max-width: 17.5cm
+          height: 415px
+          grid-template-rows: 175px 240px
+          grid-template-columns: 1fr 1fr
+     
+     .join
+          grid-area: 1 / 1 / 2 / 3
+          padding: 30px
+          align-items: center
+          p
+               margin-bottom: 0
+     .subscription
+          padding: 40px
+     
+     footer
+          max-width: 500px
+
+@media screen and (max-width: 321px)
+     main  
+          max-width: 300px
